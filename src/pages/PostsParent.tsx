@@ -13,7 +13,25 @@ type POST = {
 const PostParent = () => {
   const savedPosts = localStorage.getItem('savedPosts');
   const [posts, setPosts] = useState<POST[]>(
-    savedPosts ? JSON.parse(savedPosts) : []
+    savedPosts
+      ? JSON.parse(savedPosts)
+      : [
+          {
+            id: Date.now(),
+            title: 'First Post',
+            content: 'This going to be real fun',
+          },
+          {
+            id: Date.now(),
+            title: 'Intresting',
+            content: 'Everything i nice i hope i can blow up on this site',
+          },
+          {
+            id: Date.now(),
+            title: 'Nice',
+            content: 'React is going to be fun',
+          },
+        ]
   );
   useEffect(() => {
     localStorage.setItem('savedPosts', JSON.stringify(posts));
