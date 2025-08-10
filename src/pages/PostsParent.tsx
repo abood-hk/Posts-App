@@ -22,12 +22,12 @@ const PostParent = () => {
             content: 'This going to be real fun',
           },
           {
-            id: Date.now(),
+            id: Date.now() + 1,
             title: 'Intresting',
             content: 'Everything i nice i hope i can blow up on this site',
           },
           {
-            id: Date.now(),
+            id: Date.now() + 2,
             title: 'Nice',
             content: 'React is going to be fun',
           },
